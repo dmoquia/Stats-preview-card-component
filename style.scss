@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// primary color
+$Verydarkblue: hsl(233, 47%, 7%); // (main background)
+$DarkDesaturatedBlue: hsl(244, 38%, 16%); // (card background)
+$SoftViolet: rgb(170, 92, 219); //(accent)
+
+// Neutral
+$White: hsl(0, 0%, 100%); // (main heading, stats)
+$SlightlyTransparentWhite: hsla(0, 0%, 100%, 0.75); //(main paragraph)
+$Statheading: hsla(0, 0%, 100%, 0.6); // (stat headings)
+
+$fontStack: "Inter", sans-serif, "Lexend Deca", sans-serif;
+
+body {
+  font-size: 15px;
+  font-family: $fontStack;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $Verydarkblue;
+
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+  }
+}
+
+.container {
+  margin: 5em 0;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  color: $White;
+  text-align: center;
+  overflow: hidden;
+  .card-info {
+    background: $DarkDesaturatedBlue;
+    order: 1;
+    padding: 2em;
+    h1 {
+      font-size: 1.5rem;
+    }
+    .insights {
+      color: $SoftViolet;
+    }
+    .main-text {
+      color: $Statheading;
+      line-height: 1.5rem;
+      word-spacing: 0.3rem;
+      padding: 1em 0;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        padding: 1em 0;
+        p {
+          color: $Statheading;
+        }
+      }
+    }
+  }
+  .img-container {
+    display: flex;
+    width: 100%;
+
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: linear-gradient(
+        rgba(rgb(76, 5, 134), 0.6),
+        rgba(rgb(76, 5, 134), 0.6)
+      );
+      z-index: 1;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    & {
+      margin: 0;
+      width: 70%;
+      flex-wrap: nowrap;
+      text-align: left;
+
+      .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 50%;
+        order: 0;
+        padding: 4em;
+        h1 {
+          font-size: 2.5rem;
+        }
+        .main-text {
+          color: $Statheading;
+          line-height: 1.8rem;
+          word-spacing: 0.3rem;
+          padding: 1em 0;
+        }
+        ul {
+          display: flex;
+          li {
+            padding-right: 5em;
+          }
+        }
+      }
+      .img-container {
+        width: 40%;
+      }
+    }
+  }
+}

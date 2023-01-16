@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Inter", sans-serif, "Lexend Deca", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(233deg, 47%, 7%);
+}
+@media screen and (min-width: 768px) {
+  main {
+    height: 100vh;
+  }
+}
+
+.container {
+  margin: 5em 0;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+  overflow: hidden;
+}
+.container .card-info {
+  background: hsl(244deg, 38%, 16%);
+  order: 1;
+  padding: 2em;
+}
+.container .card-info h1 {
+  font-size: 1.5rem;
+}
+.container .card-info .insights {
+  color: rgb(170, 92, 219);
+}
+.container .card-info .main-text {
+  color: hsla(0deg, 0%, 100%, 0.6);
+  line-height: 1.5rem;
+  word-spacing: 0.3rem;
+  padding: 1em 0;
+}
+.container .card-info ul {
+  list-style-type: none;
+}
+.container .card-info ul li {
+  padding: 1em 0;
+}
+.container .card-info ul li p {
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+.container .img-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.container .img-container:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(rgba(76, 5, 134, 0.6), rgba(76, 5, 134, 0.6));
+  z-index: 1;
+}
+.container .img-container img {
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .container {
+    margin: 0;
+    width: 70%;
+    flex-wrap: nowrap;
+    text-align: left;
+  }
+  .container .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    order: 0;
+    padding: 4em;
+  }
+  .container .card-info h1 {
+    font-size: 2.5rem;
+  }
+  .container .card-info .main-text {
+    color: hsla(0deg, 0%, 100%, 0.6);
+    line-height: 1.8rem;
+    word-spacing: 0.3rem;
+    padding: 1em 0;
+  }
+  .container .card-info ul {
+    display: flex;
+  }
+  .container .card-info ul li {
+    padding-right: 5em;
+  }
+  .container .img-container {
+    width: 40%;
+  }
+}
