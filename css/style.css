@@ -28,7 +28,6 @@ main {
   border-radius: 0.5em;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   width: 80%;
   color: hsl(0deg, 0%, 100%);
